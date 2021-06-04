@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap');
+
+/* Root variables */
+
+:root{
+   --font-heading: 'Roboto', sans-serif;
+   --font-primary: 'Poppins', sans-serif;   
+   --red:#C85454;
+   --dark-red:#AF4545;
+   --background:#180606;
+   --light-text-color:rgba(255, 255, 255, 0.7);
+   --heading-light-color:rgba(227, 227, 227, 0.96);
+}
+
+/* Basic Reset */
+
+*,*::after,*::before{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: var(--background);
+   color: var(--light-text-color);
+   font-family: var(--font-primary);
+   transition: 0.21s;
+   transition-timing-function: ease-in;
+
+}
+
+li,a{
+   text-decoration: none;
+   list-style: none;
+}
+
+.container{
+   min-height: 100vh;
+   max-height: 800px;
+   margin: 0 7.2916vw;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   /* grid-template-rows: 13.714vh 72.428vh 13.714vh; */
+   column-gap:18px;
+   grid-template-areas: 
+   "contact-info contact-info"
+   "text-col img-col"
+   ". disclaimer"
+   ;
+}
+.contact-info{
+   grid-area: contact-info;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   padding-bottom: 18px;
+   padding-right: 9px;
+}
+.contact-info li{
+   margin-left :36px;
+   text-transform: uppercase;
+}
+.contact-info li a:hover{
+   color: #fff;
+}
+.text-col{
+   grid-area: text-col;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.text-col .paragraph,.text-col .get-started{
+   width: 72%;
+   align-self: flex-end;
+}
+.text-col .paragraph{
+   font-size: 12px;
+}
+.text-col .paragraph p{
+   padding: 21px 0;
+   line-height: 153.5%;
+}
+.text-col .heading{
+   font-family: Montserrat;
+   font-weight: 500;
+   text-transform: uppercase;
+   font-size: 3.64vw;
+   color: var(--heading-light-color);
+}
+.text-col .heading::before{
+   content: "Can you ";
+   color: var(--red);
+}
+.text-col .heading::after{
+   content: "?";
+   color: var(--red);
+}
+.img-col{
+   grid-area: img-col;
+   background-image: url(/static/images/titanic-dock.jpg);
+   background-repeat: no-repeat;
+   background-position:9% 50%;
+   background-size: cover;
+   display: flex;
+   justify-content: flex-end;
+   border-radius: 9px;
+}
+.disclaimer{
+   grid-area: disclaimer;
+   color: #fff;
+   font-family: 'Roboto';
+   font-style: italic;
+   font-size: 12px;
+   font-weight: 400;
+   display: flex;
+   padding-top: 12px;
+   justify-content: center;
+}
+.disclaimer::after{
+   content: " Titanic";
+   color: var(--red);
+   font-family: 'Roboto';
+   font-style: italic;
+   font-weight: 400;
+   margin-left: 4.5px;
+}
+.get-started{
+   color: #fff;
+   text-transform: uppercase;
+}
+.get-started:hover a{
+   padding: 9px 45px;
+}
+.get-started-link{
+   background-color: var(--dark-red);
+   padding: 9px 24px;
+   border-radius: 9px;
+}
+
+/* Media Queries */
+
+@media (max-width: 767.98px){
+   .container{
+      overflow-x: hidden;
+      min-height: 900px;
+      margin: 0 7.72vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3.67434fr 0.4728fr 3.1705fr 0.45fr;
+      row-gap:18px;
+      grid-template-areas: 
+      "text-col"
+      "contact-info"
+      "img-col"
+      "disclaimer"
+      ;
+   }
+   .text-col .paragraph,.text-col .get-started{
+      width: 100%;
+      align-self: flex-end;
+   }
+   .text-col .heading{
+      margin-top: 18px;
+      text-align: center;
+      font-size: 7.24vw;
+   }
+   .contact-info{
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+   }
+   .contact-info li {
+      margin-left: 0;
+      margin: 0 21px;
+      font-size: 12px;
+      text-align: center;
+   }
+   .get-started{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+   }
+
+
+}
