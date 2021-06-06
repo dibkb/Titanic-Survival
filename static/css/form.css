@@ -96,9 +96,11 @@ form input,form select{
    background-position : 96% 50%!important;
 
 }
+
 .form-control:focus,.form-select:focus{
-   border: 1px solid #fff!important;
+   
    box-shadow: none!important;
+   background-color: rgba(255, 255, 255, 0.27)!important;
 }
 .form-col form{
    padding: 3vh 6vw;
@@ -112,7 +114,7 @@ form input,form select{
    font-family: Montserrat;
    font-weight: 500;
    padding-top: 6%;
-   color: rgba(227, 227, 227, 0.96);
+   color: var(--red);
 
 }
 form .more-info a{
@@ -157,6 +159,7 @@ form .more-info a:hover{
    .img-col .paragraph{
       position: relative;
       width: 100%;
+      padding: 18px 0;
    }
    .img-col .paragraph p{
       width: 100%;
@@ -180,13 +183,12 @@ form .more-info a:hover{
    .img-col .paragraph{
       position: relative;
       width: 100%;
+      padding: 18px 0;
    }
    .img-col .paragraph p{
       width: 100%;
 
    }
-
-
 
 }
 
