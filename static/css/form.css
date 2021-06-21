@@ -137,6 +137,9 @@ form .more-info a:hover{
    background-color: var(--red);
    padding: 9px 54px;
 }
+.btn-form-fillup{
+   display: none;
+}
 
 @media (max-width: 767.98px){
    .my-container{
@@ -145,9 +148,17 @@ form .more-info a:hover{
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: 
-      "form-col"
       "img-col"
       ;
+   }
+   .form-col{
+      display: none;
+   }
+   .img-col .btn-form-fillup{
+      display: inline;
+      margin-bottom: 6%;
+      text-align: center;
+      color: #fff;
    }
    .img-col{
       padding: 3vh 6vw;
@@ -155,11 +166,13 @@ form .more-info a:hover{
       position: relative;
       display: flex;
       flex-direction: column;
+      margin-top: 6%;
    }
    .img-col .paragraph{
       position: relative;
       width: 100%;
       padding: 18px 0;
+      margin-top: 12%;
    }
    .img-col .paragraph p{
       width: 100%;

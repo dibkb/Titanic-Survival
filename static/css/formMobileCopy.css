@@ -1,0 +1,18 @@
+@media (max-width: 767.98px){
+   .my-container{
+      padding-left: 0;
+      overflow-x: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "form-col"
+      ;
+   }
+   .form-col{
+      display: block;
+   }
+   .img-col{
+      display: none;
+   }
+
+}
