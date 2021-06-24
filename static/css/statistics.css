@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap');
+
+/* Root variables */
+
+:root{
+   --font-roboto: 'Roboto', sans-serif;
+   --font-primary: 'Poppins', sans-serif; 
+   --font-heading:'Montserrat';  
+   --red: #C85454;
+   --link-blue: #3586FF;
+   --green-:#3E901C;
+   --background:#180606;
+   --light-text-color:rgba(255, 255, 255, 0.7);
+   --heading-light-color:rgba(227, 227, 227, 0.96);
+}
+
+html,body{
+   overflow-x: hidden!important;
+}
+*,*::after,*::before{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: var(--background);
+   color: #fff;
+   font-family: var(--font-primary);
+   transition: 0.21s;
+   transition-timing-function: ease-in;
+
+}
+li,a{
+   text-decoration: none;
+   list-style: none;
+}
+.container{
+   height: 94vh;
+   margin: 3vh 3vw;
+   display: grid;
+   grid-template-rows: 1fr 5.0329fr 1.6593fr;
+   grid-template-areas: 
+   "heading"
+   "stats"
+   "footer"
+   ;
+}
+.heading{
+   grid-area: heading;
+   text-transform: uppercase;
+   font-family: var(--font-heading);
+   color: var(--red);
+   text-align: center;
+   font-weight: 500;
+}
+.stats{
+   grid-area: stats;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}
+.stats > *{
+   font-family: var(--font-roboto);
+   text-align: center;
+   font-size: 1.041vw;
+}
+.stats_points::before {
+   content: "•"; color: #fff;
+   margin-right: 6px;
+}
+
+.footer{
+   grid-area: footer;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   text-align: center;
+}
+.footer .more_stats_link{
+   font-size: 1.041vw;
+   font-family: var(--font-roboto);
+   color: var(--link-blue);
+   text-decoration: underline;
+   background: transparent;
+}
+.footer .more_stats_link:hover{
+   filter: brightness(130%);
+}
+.footer .back_button{
+   border: 1px solid var(--red);
+   border-radius: 9px;
+   padding: 9px 45px;
+   background-color: var(--red);
+}
+.footer .back_button:hover{
+   padding: 9px 81px;
+}
+
+
+@media (max-width: 767.98px){
+   .stats > *,.footer .more_stats_link{
+      font-size: 2.89vw;
+   }
+   .heading{
+      font-size: 6.52vw;
+   }
+
+}
