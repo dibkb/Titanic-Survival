@@ -33,9 +33,9 @@ li,a{
 }
 
 .container{
-   max-height: 100vh;
+   height: 100vh;
    min-height: 800px;
-   margin: 0 7vw;
+   margin: 1.2vh 7vw;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -47,20 +47,25 @@ li,a{
    font-family: var(--font-heading);
    color: var(--green-);
    text-transform: uppercase;
-   margin: 18px 0;
+   margin-top: 18px;
    font-size:3.64vw ;
+   font-weight: 500;
 }
 .sub-heading{
    font-family: var(--font-heading);
    font-weight: 500;
    font-size: 2.08vw;
-   margin: 6px;
+   margin: 15px;
+
 }
 .heading-quote{
    font-family: var(--font-roboto);
    font-size: 1.56vw;
    font-weight: 500;
    margin:6px;
+}
+.survive{
+   color: var(--green-);
 }
 .img-section{
    width: 100%;
@@ -85,11 +90,44 @@ li,a{
    font-family: var(--font-roboto);
    font-size: 15px;
 }
+.btn_group{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+/* SURVIVE PAGE */
+.score_buttton_survive{
+   border:2.1px solid var(--green-);
+   border-radius: 9px;
+   padding: 9px 45px;
+   margin: 21px;
+   background: transparent;
+   color: var(--green-);
+
+}
+.score_buttton_survive:hover{
+   padding: 9px 81px;
+}
+
+/* NOT SURVIVE PAGE */
+.score_buttton_survive_not{
+   border:2.1px solid var(--red);
+   border-radius: 9px;
+   padding: 9px 45px;
+   margin: 21px;
+   background: transparent;
+   color: var(--red);
+
+}
+.score_buttton_survive:hover,.score_buttton_survive_not:hover{
+   padding: 9px 81px;
+}
+
 .play_buttton{
    text-transform: uppercase;
    border:1px solid var(--green-);
    border-radius: 9px;
-   padding: 9px 60px;
+   padding: 9px 45px;
    margin: 21px;
    background: var(--green-);
 }
@@ -131,6 +169,9 @@ li,a{
       transform: none;
       background: transparent;
       margin: 9px;
+   }
+   .btn_group{
+      flex-direction: column;
 
    }
 }

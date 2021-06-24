@@ -64,10 +64,18 @@ li,a{
    font-size: 1.041vw;
 }
 .stats_points::before {
-   content: "•"; color: #fff;
+   content: "•"; 
+   color: #fff;
    margin-right: 6px;
 }
-
+.disclamair{
+   font-style: italic;
+   font-weight: 400;
+}
+.disclamair::before{
+   content: "DISCLAIMER : ";
+   color: var(--red);
+}
 .footer{
    grid-area: footer;
    display: flex;
