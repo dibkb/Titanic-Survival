@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins&family=Roboto:ital,wght@0,400;1,400;1,500&display=swap');
+
+/* Root variables */
+
+:root{
+   --font-roboto: 'Roboto', sans-serif;
+   --font-primary: 'Poppins', sans-serif; 
+   --font-heading:'Montserrat';  
+   --red: rgba(231, 60, 60, 0.9);
+   --green-:#3E901C;
+   --background:#180606;
+   --light-text-color:rgba(255, 255, 255, 0.7);
+   --heading-light-color:rgba(227, 227, 227, 0.96);
+}
+
+html,body{
+   overflow-x: hidden!important;
+}
+*,*::after,*::before{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: var(--background);
+   color: #fff;
+   font-family: var(--font-primary);
+   transition: 0.21s;
+   transition-timing-function: ease-in;
+
+}
+li,a{
+   text-decoration: none;
+   list-style: none;
+}
+
+.container{
+   max-height: 100vh;
+   min-height: 800px;
+   margin: 0 7vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+
+}
+.heading{
+   font-family: var(--font-heading);
+   color: var(--green-);
+   text-transform: uppercase;
+   margin: 18px 0;
+   font-size:3.64vw ;
+}
+.sub-heading{
+   font-family: var(--font-heading);
+   font-weight: 500;
+   font-size: 2.08vw;
+   margin: 6px;
+}
+.heading-quote{
+   font-family: var(--font-roboto);
+   font-size: 1.56vw;
+   font-weight: 500;
+   margin:6px;
+}
+.img-section{
+   width: 100%;
+   position: relative;
+}
+.image{
+   max-width: 90vw;
+   max-height: 336px;
+   border-radius: 9px;
+
+}
+.img-section p{
+   max-width: 450px;
+   position: absolute;
+   bottom: 8px;
+   top: 86%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: transparent;
+}
+.image-text{
+   font-family: var(--font-roboto);
+   font-size: 15px;
+}
+.play_buttton{
+   text-transform: uppercase;
+   border:1px solid var(--green-);
+   border-radius: 9px;
+   padding: 9px 60px;
+   margin: 21px;
+   background: var(--green-);
+}
+.play_buttton:hover{
+   padding: 9px 81px;
+}
+.stats_link{
+   font-size: 13px;
+   font-family: var(--font-roboto);
+   text-decoration: underline;
+}
+/* for the fail page */
+.heading-fail{
+   color: var(--red)
+}
+.button_fail{
+   border-color: var(--red);
+   background: var(--red);
+
+}
+
+@media (max-width: 768px){
+   .heading{
+      font-size: 6.52vw;
+   }
+   .sub-heading{
+      font-size: 3.86vw;
+   }
+   .heading-quote{
+      font-size: 2.89vw;
+   }
+   .img-section, .img-section p{
+      position: static;
+   }
+   .img-section p{
+      max-width: 100%;
+      top: 0;
+      left: 0;
+      transform: none;
+      background: transparent;
+      margin: 9px;
+
+   }
+}
