@@ -40,7 +40,7 @@
             <div class="col-sm-8">
               {{ form.name.label(class = 'form-label') }}
               {% if form.name.errors %}
-                 {{ form.name(class = 'form-control is-invalid error-outline') }}
+                 {{ form.name(class = 'form-control is-invalid error-outline dark-input') }}
                     <div class="invalid-feedback">
                        {% for error in form.name.errors %}
                           <span class="error">{{ error }}</span>
@@ -70,8 +70,8 @@
              <div class="col-sm-6">
                <label class="form-label" for="sex">Sex</label>
                <select class="form-select" id="sex" name = 'Sex'>
-                 <option value="male">M</option>
-                 <option value="female">F</option>
+                 <option value="male">Male</option>
+                 <option value="female">Female</option>
                </select>
              </div>
              <div class="col-md-6">
@@ -109,7 +109,7 @@
              <div class="col-md-12">
               {{ form.fare.label(class = 'form-label') }}
               {% if form.fare.errors %}
-                 {{ form.fare(class = 'form-control is-invalid error-outline') }}
+                 {{ form.fare(class = 'form-control is-invalid error-outline dark-input') }}
                     <div class="invalid-feedback">
                        {% for error in form.fare.errors %}
                           <span class="error">{{ error }}</span>
@@ -136,9 +136,12 @@
                  <option value="Q">Q</option>                 
                </select>
              </div>
-             <div class="col-md-12 text-center more-info">
-                <a href="https://github.com/awesomedata/awesome-public-datasets/issues/351">For more information click here.</a>
-             </div>
+               <div class="form-check col-md-12 ms-2">
+                  <input class="form-check-input form-chekbox" type="checkbox" value="1" name="concent" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                  People can view my name and score
+                  </label>
+               </div>
              <div class="col-md-12 text-center">
                {{ form.submit(class="btn-result") }}
              </div>

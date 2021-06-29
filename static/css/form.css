@@ -86,7 +86,7 @@ form label{
    font-family: "Roboto";
    font-size: 14px;
 }
-form input,form select{
+form input:not(.form-chekbox , .btn-result),form select{
    background: rgba(255, 255, 255, 0.2)!important;
    border: none!important;
    color: #fff!important;
@@ -98,7 +98,6 @@ form input,form select{
 }
 
 .form-control:focus,.form-select:focus{
-   
    box-shadow: none!important;
    background-color: rgba(255, 255, 255, 0.27)!important;
 }
@@ -126,6 +125,7 @@ form .more-info a{
 form .more-info a:hover{
    color: #3586FF;
 }
+
 .btn-result{
    background-color: var(--red)!important;
    padding: 9px 36px;

@@ -11,6 +11,6 @@ class UserForm(FlaskForm):
     age = FloatField('Age (in years)',
                         validators=[DataRequired(message = 'Age is required'),NumberRange(min=0, max=100,message = "Maximum age limit is 100")])
 
-    fare = FloatField('Fare (in £)',
+    fare = FloatField('Fare i can spend on the ticket (in £)',
                         validators=[DataRequired(message = 'Fare is required'),NumberRange(min=5, max=512,message = "Fare is between £5 and £512")])
     submit = SubmitField('get on titanic')

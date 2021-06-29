@@ -33,6 +33,7 @@ else:
 
 db = SQLAlchemy(app)
 
+#Database model
 class User(db.Model):
    id = db.Column(db.Integer,primary_key = True)
    name = db.Column(db.String(120),unique = False, nullable = False)
@@ -44,11 +45,7 @@ class User(db.Model):
 
 
 
-
-
-
-
-
+#define routes
 @app.route('/')
 @app.route('/home')
 def home():
@@ -77,10 +74,18 @@ def form():
       input_df = ohe_enc.transform(input_df)
       prob = model.predict_proba(scaler.transform(input_df))[0][1]
       prob = round((prob * 100),2)
-
-      user = User(name = form.name.data,score = prob)
-      db.session.add(user)
-      db.session.commit()
+      
+      #add to database only if the user gives concent
+      try:
+         concent = int(request.form['concent'])
+      except:
+         concent = 0
+      print(concent)
+      if concent == 1:
+         user = User(name = form.name.data,score = prob)
+         db.session.add(user)
+         db.session.commit()
+         print('success')
       
       if prob >= 50:
          return render_template('result.html',prob = prob,name = form.name.data)
@@ -111,6 +116,17 @@ def formMobile():
       input_df = ohe_enc.transform(input_df)
       prob = model.predict_proba(scaler.transform(input_df))[0][1]
       prob = round((prob * 100),2)
+      try:
+         concent = int(request.form['concent'])
+      except:
+         concent = 0
+      print(concent)
+      if concent == 1:
+         user = User(name = form.name.data,score = prob)
+         db.session.add(user)
+         db.session.commit()
+         print('success')
+      
 
       if prob >= 50:
          return render_template('result.html',prob = prob,name = form.name.data)
