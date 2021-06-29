@@ -23,6 +23,7 @@ if uri.startswith("postgres://"):
 
 
 ENV = 'production'
+
 if ENV == 'dev':
    app.debug = True
    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' 
