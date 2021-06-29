@@ -24,7 +24,7 @@
 }
 
 html,body{
-   overflow-x: hidden!important;
+   overflow-x: auto!important;
 }
 .heading{
    text-align: center;
