@@ -50,12 +50,28 @@ li,a{
    color: var(--red);
    text-align: center;
    font-weight: 500;
+   /* animation */
+   animation-name:top_load;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-in;
+   animation-delay: 1.8s;
+   animation-fill-mode: forwards;
+   opacity: 0; 
+
 }
 .stats{
    grid-area: stats;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
+   /* animation */
+   animation-name:top_load;
+   animation-duration: .9s;
+   animation-timing-function:  ease-in-out;
+   animation-delay: .2s;
+   animation-fill-mode: forwards;
+   opacity: 0;   
 
 }
 .stats > *{
@@ -71,6 +87,13 @@ li,a{
 .disclamair{
    font-style: italic;
    font-weight: 400;
+   /* animation */
+   animation-name:social_load;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-in;
+   animation-delay: 1.5s;
+   animation-fill-mode: forwards;
+   opacity: 0;  
 }
 .disclamair::before{
    content: "DISCLAIMER : ";
@@ -82,6 +105,7 @@ li,a{
    flex-direction: column;
    justify-content: space-around;
    text-align: center;
+  
 }
 .footer .more_stats_link{
    font-size: 1.041vw;
@@ -89,6 +113,14 @@ li,a{
    color: var(--link-blue);
    text-decoration: underline;
    background: transparent;
+
+   /* animation */
+   animation-name:img_load;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-out;
+   animation-delay: 2.1s;
+   animation-fill-mode: forwards;
+   opacity: 0;  
 }
 .footer .more_stats_link:hover{
    filter: brightness(130%);
@@ -98,6 +130,18 @@ li,a{
    border-radius: 9px;
    padding: 9px 45px;
    background-color: var(--red);
+
+
+}
+.footer .btn_{
+   /* animation */
+   animation-name:img_load;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-out;
+   animation-delay: 2.1s;
+   animation-fill-mode: forwards;
+   opacity: 0;  
+
 }
 .footer .back_button:hover{
    padding: 9px 81px;
@@ -111,5 +155,43 @@ li,a{
    .heading{
       font-size: 6.52vw;
    }
+
+}
+
+
+
+/* Animation */
+
+@keyframes img_load {
+   from{
+      opacity: 0;
+      transform: translate(690px);
+   }
+   to{
+      opacity: 1;
+   }
+}
+
+@keyframes social_load{
+   from{
+      opacity: 0;
+      transform: translate(-690px);
+   }
+   to{
+   opacity: 1;
+   }
+   
+
+}
+
+@keyframes top_load{
+   from{
+      opacity: 0;
+      transform: translateY(-200px);
+   }
+   to{
+   opacity: 1;
+   }
+   
 
 }

@@ -9,14 +9,15 @@ import os
 import re
 
 
-model = pickle.load(open('titanic.pkl', 'rb'))
-ohe_enc = pickle.load(open('ohe_enc.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+model = pickle.load(open('pickle/titanic.pkl', 'rb'))
+ohe_enc = pickle.load(open('pickle/ohe_enc.pkl', 'rb'))
+scaler = pickle.load(open('pickle/scaler.pkl', 'rb'))
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'u23t4y2g4hj1ygh4i4y234234bkj3juy43uyy4d'
 
-uri = os.getenv("DATABASE_URL")  # or other relevant config var
+#comment this part in development
+uri = os.getenv("DATABASE_URL")  
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 

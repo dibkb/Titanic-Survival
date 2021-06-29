@@ -43,6 +43,14 @@ li,a{
    position: relative;
    margin: auto; /* Center it */
    border-radius: 9px;
+   
+      /* animation */
+      animation-name:social_load;
+      animation-duration: 1.5s;
+      animation-timing-function:  cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
 
 
 }
@@ -76,6 +84,14 @@ li,a{
 .form-col{
    grid-area: form-col;
    background-color: var(--background);
+   
+      /* animation */
+      animation-name: img_load;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-out;
+      animation-delay: .6s;
+      animation-fill-mode: forwards;
+      opacity: 0;
 
 }
 form input{
@@ -115,6 +131,15 @@ form input:not(.form-chekbox , .btn-result),form select{
    padding-top: 6%;
    color: var(--red);
 
+   /* animation */
+
+   animation-name:img_load;
+   animation-duration: 1.2s;
+   animation-timing-function:  ease-in;
+   animation-delay: 1.8s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+
 }
 form .more-info a{
    font-size: 14px;
@@ -132,6 +157,15 @@ form .more-info a:hover{
    border-radius: 9px;
    text-transform: uppercase;
    border: none;
+
+   /* animation */
+
+   animation-name:img_load;
+   animation-duration: 1.5s;
+   animation-timing-function:  ease-out;
+   animation-delay: 1.5s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 }
 .btn-result:hover{
    background-color: var(--red)!important;
@@ -162,12 +196,22 @@ form .more-info a:hover{
    }
    .form-col{
       display: none;
+
+
+
    }
    .img-col .btn-form-fillup{
       display: inline;
       margin-bottom: 6%;
       text-align: center;
       color: #fff;
+      /* animation */
+      animation-name:img_load;
+      animation-duration: 1.5s;
+      animation-timing-function:  cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
    }
    .img-col{
       padding: 3vh 6vw;
@@ -176,12 +220,30 @@ form .more-info a:hover{
       display: flex;
       flex-direction: column;
       margin-top: 6%;
+
+
+      /* animation */
+      animation-name:social_load;
+      animation-duration: 1.5s;
+      animation-timing-function:  cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      animation-delay: .45s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+
+
    }
    .img-col .paragraph{
       position: relative;
       width: 100%;
       padding: 18px 0;
       margin-top: 12%;
+         /* animation */
+         animation-name:social_load;
+         animation-duration: .9s;
+         animation-timing-function:  ease-in-out;
+         animation-delay: .9s;
+         animation-fill-mode: forwards;
+         opacity: 0;
    }
    .img-col .paragraph p{
       width: 100%;
@@ -214,3 +276,26 @@ form .more-info a:hover{
 
 }
 
+/* Animation */
+
+@keyframes img_load {
+   from{
+      opacity: 0;
+      transform: translate(690px);
+   }
+   to{
+      opacity: 1;
+   }
+}
+
+@keyframes social_load{
+   from{
+      opacity: 0;
+      transform: translate(-690px);
+   }
+   to{
+   opacity: 1;
+   }
+   
+
+}

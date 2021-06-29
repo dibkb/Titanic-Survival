@@ -70,6 +70,13 @@ li,a{
 .img-section{
    width: 100%;
    position: relative;
+   /* animation */
+   animation-name:img_load;
+   animation-duration: 1.2s;
+   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+   animation-delay: .9s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 }
 .image{
    max-width: 90vw;
@@ -94,6 +101,13 @@ li,a{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   /* animation */
+   animation-name:social_load;
+   animation-duration: 1.5s;
+   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+   animation-delay: .9s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 }
 /* SURVIVE PAGE */
 .score_buttton_survive{
@@ -138,6 +152,14 @@ li,a{
    font-size: 13px;
    font-family: var(--font-roboto);
    text-decoration: underline;
+
+   /* animation */
+   animation-name:social_load;
+   animation-duration: .67s;
+   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+   animation-delay: 1.2s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 }
 /* for the fail page */
 .heading-fail{
@@ -146,6 +168,18 @@ li,a{
 .button_fail{
    border-color: var(--red);
    background: var(--red);
+
+}
+
+/* ANIMATION */
+.heading,.heading-quote,.sub-heading{
+   /* animation */
+   animation-name:top_load;
+   animation-duration: .9s;
+   animation-timing-function:  ease-in-out;
+   animation-delay: .2s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 
 }
 
@@ -175,3 +209,41 @@ li,a{
 
    }
 }
+
+
+/* Animation */
+
+@keyframes img_load {
+   from{
+      opacity: 0;
+      transform: translate(690px);
+   }
+   to{
+      opacity: 1;
+   }
+}
+
+@keyframes social_load{
+   from{
+      opacity: 0;
+      transform: translate(-690px);
+   }
+   to{
+   opacity: 1;
+   }
+   
+
+}
+
+@keyframes top_load{
+   from{
+      opacity: 0;
+      transform: translateY(-200px);
+   }
+   to{
+   opacity: 1;
+   }
+   
+
+}
+
