@@ -2,7 +2,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, SubmitField, FloatField
 from wtforms.validators import DataRequired, Length, NumberRange
-from titanic.models import User
+
 
 
 class UserForm(FlaskForm):
