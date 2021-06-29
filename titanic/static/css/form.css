@@ -127,18 +127,27 @@ form .more-info a:hover{
    color: #3586FF;
 }
 .btn-result{
-   background-color: var(--red);
+   background-color: var(--red)!important;
    padding: 9px 36px;
    border-radius: 9px;
    text-transform: uppercase;
    border: none;
 }
 .btn-result:hover{
-   background-color: var(--red);
+   background-color: var(--red)!important;
    padding: 9px 54px;
 }
 .btn-form-fillup{
    display: none;
+}
+.error{
+   color: #fc2626;
+   font-family: var(--font-heading);
+   font-weight: 400;
+}
+.error-outline{
+   border: .6px solid  #fc2626!important;
+
 }
 
 @media (max-width: 767.98px){

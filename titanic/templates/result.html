@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/static/images/favicon.jpg">
    <link rel="stylesheet" href="/static/css/result.css">
    <title>Your Result</title>
 </head>
@@ -12,18 +13,19 @@
       <h1 class="heading">
          ConGratulations !!!
       </h1>
-      <h3 class="heading-quote">You survived the ICEBERG crash</h3>
-      <h2 class="sub-heading">The probability of your surviving is 
-         <span class="survive">0.8134</span></h2>
+      <h3 class="heading-quote">You survived the ICEBERG crash 
+         <span class="survive heading-quote">{{ name }}</span>
+      <h2 class="sub-heading">Probability of your surviving is 
+         <span class="survive">{{ prob }} %</span></h2>
       <div class="img-section">
          <img src="/static/images/titanic-lifeboat.jpg" alt="" class="image">
          <p class="image-text">The last lifeboat launched from the Titanic makes its way through the water. April 15, 1912.</p>
       </div>
       <div class="btn_group">
-         <a href="#" class="score_buttton_survive">SCOREBOARD</a>
-         <a href="#" class="play_buttton">Play Again</a>
+         <a href="{{url_for('leaderboard')}}" class="score_buttton_survive">SCOREBOARD</a>
+         <a href="{{url_for('form')}}" class="play_buttton">Play Again</a>
       </div>   
-      <a href="" class="stats_link">Click here to see some statistics of passengers</a>
+      <a href="{{url_for('statisics')}}" class="stats_link">Click here to see some statistics of passengers</a>
    
    </div>
    
