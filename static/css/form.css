@@ -87,13 +87,13 @@ li,a{
    grid-area: form-col;
    background-color: var(--background);
    
-      /* animation */
-      animation-name: img_load;
-      animation-duration: 1.2s;
-      animation-timing-function: ease-out;
-      animation-delay: .6s;
-      animation-fill-mode: forwards;
-      opacity: 0;
+   /* animation */
+   animation-name: img_load;
+   animation-duration: 1.2s;
+   animation-timing-function: ease-out;
+   animation-delay: .6s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 
 }
 
@@ -105,7 +105,7 @@ form label{
    font-family: "Roboto";
    font-size: 14px;
 }
-form input:not(.form-chekbox , .btn-result,.form-range),form select{
+form input:not(.form-chekbox , .btn-result,.range),form select{
    background: rgba(255, 255, 255, 0.2)!important;
    border: none!important;
    color: #fff!important;
