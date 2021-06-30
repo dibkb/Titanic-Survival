@@ -21,5 +21,8 @@
    .img-col{
       display: none;
    }
+   #range{
+      width: 100%;
+   }
 
 }

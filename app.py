@@ -17,13 +17,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'u23t4y2g4hj1ygh4i4y234234bkj3juy43uyy4d'
 
 #comment this part in development
-uri = os.getenv("DATABASE_URL")  
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
+# uri = os.getenv("DATABASE_URL")  
+# if uri.startswith("postgres://"):
+#     uri = uri.replace("postgres://", "postgresql://", 1)
 
 
 
-ENV = 'production'
+ENV = 'dev'
 
 if ENV == 'dev':
    app.debug = True
@@ -61,7 +61,7 @@ def form():
       input_dict = {
          "Name_prefix" : [request.form['Name_prefix']],
          "Embarked": [request.form['Embarked']],
-         "Fare":form.fare.data,
+         "Fare":request.form['fare'],
          "Parch":request.form['Parch'],
          "SibSp":request.form['SibSp'],
          "Age":form.age.data,
@@ -87,7 +87,7 @@ def form():
          db.session.add(user)
          db.session.commit()
          print('success')
-      
+
       if prob >= 50:
          return render_template('result.html',prob = prob,name = form.name.data)
             
@@ -103,7 +103,7 @@ def formMobile():
       input_dict = {
          "Name_prefix" : [request.form['Name_prefix']],
          "Embarked": [request.form['Embarked']],
-         "Fare":form.fare.data,
+         "Fare":request.form['fare'],
          "Parch":request.form['Parch'],
          "SibSp":request.form['SibSp'],
          "Age":form.age.data,

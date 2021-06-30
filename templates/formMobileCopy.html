@@ -11,7 +11,7 @@
    <title>A ride for a lifetime</title>
 </head>
 <body>
-   <div class="my-container">
+   <div class="container">
       <div class="img-col">
          <img src="/static/images/titanic-captain.jpg" alt="">
          <div class="paragraph">
@@ -39,7 +39,7 @@
               <div class="col-sm-8">
                 {{ form.name.label(class = 'form-label') }}
                 {% if form.name.errors %}
-                   {{ form.name(class = 'form-control is-invalid error-outline') }}
+                   {{ form.name(class = 'form-control is-invalid error-outline dark-input') }}
                       <div class="invalid-feedback">
                          {% for error in form.name.errors %}
                             <span class="error">{{ error }}</span>
@@ -105,47 +105,39 @@
                   <option value="10">More</option>                        
                 </select>  
                </div>
-               <div class="col-md-12">
-                {{ form.fare.label(class = 'form-label') }}
-                {% if form.fare.errors %}
-                   {{ form.fare(class = 'form-control is-invalid error-outline') }}
-                      <div class="invalid-feedback">
-                         {% for error in form.fare.errors %}
-                            <span class="error">{{ error }}</span>
-                         {% endfor %}
-                      </div>
-    
-                {% else %}  
-                   {{ form.fare(class = 'form-control') }}      
-                {% endif %}
-               </div>
-               <div class="col-sm-6">
-                 <label class="form-label" for="tclass">Class</label>
+               <div class="range-wrap col-sm-12">
+                 <label for="range" class="form-label">Fare i can spend on the ticket (in £)</label>
+                 <input type="range" class="range" min="3" max="512" 
+                 value="15" id="range" name="fare">
+                 <output class="bubble"></output>
+               </div>  
+  
+               <div class="col-sm-6 clear-margin">
+                 <label class="form-label" for="tclass">Ticket Class</label>
                  <select class="form-select" id="tclass" name= 'Pclass'>
                    <option value="1">1st</option>
                    <option value="2">2nd</option>
                    <option value="2">3rd</option>                 
                  </select>
                </div>
-               <div class="col-sm-6">
+               <div class="col-sm-6 clear-margin">
                  <label class="form-label" for="port">Port of Embarkation</label>
                  <select class="form-select" id="port" name = 'Embarked'>
-                   <option value="S">S</option>
-                   <option value="C">C</option>
-                   <option value="Q">Q</option>                 
+                   <option value="S">Southampton</option>
+                   <option value="C">Cherbourg</option>
+                   <option value="Q">Queenstown</option>                 
                  </select>
                </div>
-               <div class="form-check col-md-12 ms-2">
-                  <input class="form-check-input form-chekbox" type="checkbox" value="1" name="concent" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
-                     I want to make my name and score public.
-                  </label>
-               </div>
+                 <div class="form-check col-md-12 ms-2">
+                    <input class="form-check-input form-chekbox" type="checkbox" value="1" name="concent" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                    I want to make my name and score public.
+                    </label>
+                 </div>
+  
                <div class="col-md-12 text-center">
                  {{ form.submit(class="btn-result") }}
                </div>
-   
-  
            </form>
          
       </div>
@@ -153,5 +145,8 @@
 
    <!-- Bootstrap -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+   <script src="/static/js/form.js"></script>
+   
 </body>
 </html>
