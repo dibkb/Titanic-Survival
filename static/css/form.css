@@ -38,6 +38,7 @@ li,a{
    grid-template-columns: 1.2fr 1fr;
    grid-template-areas: "img-col form-col";
    padding-left: 6vw;
+   position: relative;
 }
 .img-col{
    grid-area: img-col;
@@ -45,13 +46,13 @@ li,a{
    margin: auto; /* Center it */
    border-radius: 9px;
    
-      /* animation */
-      animation-name:social_load;
-      animation-duration: 1.5s;
-      animation-timing-function:  cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      animation-delay: 1.2s;
-      animation-fill-mode: forwards;
-      opacity: 0;
+   /* animation */
+   animation-name:social_load;
+   animation-duration: 1.5s;
+   animation-timing-function:  cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   animation-delay: 1.2s;
+   animation-fill-mode: forwards;
+   opacity: 0;
 
 
 }
@@ -95,6 +96,7 @@ li,a{
       opacity: 0;
 
 }
+
 form input{
    background-color: var(--background);
    box-shadow: none;

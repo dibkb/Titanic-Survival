@@ -8,6 +8,7 @@
       "form-col"
       ;
    }
+
    .form-col{
       display: block;
       /* animation */
@@ -24,5 +25,56 @@
    #range{
       width: 100%;
    }
+   /* INPUT RANGE */
+ input[type='range'] {
+   -webkit-appearance: none;
+   background-color: var(--dark-red);
+   height: 12px;
+   overflow: hidden;
+   width: 400px;
+   border-radius: 12px;
+ }
+ 
+ input[type='range']::-webkit-slider-runnable-track {
+   -webkit-appearance: none;
+   height: 12px;
+ }
+ 
+ input[type='range']::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   background: #fc2626;
+   border-radius: 50%;
+   box-shadow: -210px 0 0 200px var(--dark-red);
+   cursor: pointer;
+   height: 12px;
+   width: 12px;
+   border: 0;
+ }
+ 
+ input[type='range']::-moz-range-thumb {
+   background: #fc2626;
+   border-radius: 50%;
+   box-shadow: -1010px 0 0 1000px #666;
+   cursor: pointer;
+   height: 12px;
+   width: 12px;
+   border: 0;
+ }
+ 
+ input[type="range"]::-moz-range-track {
+   background-color: var(--dark-red);
+ }
+ input[type="range"]::-moz-range-progress {
+   background-color: var(--dark-red);
+   height: 12px
+ }
+ input[type="range"]::-ms-fill-upper {
+   background-color: var(--dark-red);
+ }
+ input[type="range"]::-ms-fill-lower {
+   background-color: var(--dark-red);
+ }
+
+
 
 }

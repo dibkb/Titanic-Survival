@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired, Length, NumberRange
 
 class UserForm(FlaskForm):
     name = StringField('Name',
-                           validators=[DataRequired(message = 'Name is required'), Length(min=1, max=120,message = 'Name must be between 1 and 120 characters')])
+                           validators=[DataRequired(message = 'Name is required'), Length(min=1, max=27,message = 'Name must be between 1 and 120 characters')])
     age = FloatField('Age (in years)',
                         validators=[DataRequired(message = 'Age is required'),NumberRange(min=0, max=100,message = "Maximum age limit is 100")])
 

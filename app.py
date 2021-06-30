@@ -42,7 +42,7 @@ class User(db.Model):
    score = db.Column(db.Float(6),unique = False, nullable = False)
 
    def __repr__(self):
-       return f"User('{self.name}','{self.score}')"
+       return f"User('{self.name}',{self.score})"
 
 
 

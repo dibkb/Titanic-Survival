@@ -26,6 +26,10 @@
 html,body{
    overflow-x: auto!important;
 }
+
+.container{
+   max-width: 99vw;
+}
 .heading{
    text-align: center;
    margin: 3%;
@@ -87,13 +91,23 @@ a{
    color: #fff;
 }
 
+.specify-width{
+   max-width: 81vw!important;
+   overflow: hidden!important;
+}
 
+
+/* MOBILE */
 @media (max-width: 575.98px){
    .btn-result{
       width: 50%;
    }
    .btn-result:hover{
       width: 60%;
+   }
+   .specify-width{
+      max-width: 60vw!important;
+      overflow: hidden!important;
    }
 }
 
