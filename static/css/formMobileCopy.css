@@ -25,6 +25,58 @@
    #range{
       width: 100%;
    }
+
+
+   .form-col{
+    grid-area: form-col;
+    background-color: var(--background);
+    
+    /* animation */
+    animation-name: img_load;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+ 
+ }
+ 
+ form input{
+    background-color: var(--background);
+    box-shadow: none;
+ }
+ form label{
+    font-family: "Roboto";
+    font-size: 14px;
+ }
+ form input:not(.form-chekbox , .btn-result,.form-range),form select{
+    background: rgba(255, 255, 255, 0.2)!important;
+    border: none!important;
+    color: #fff!important;
+ }
+ .form-select{
+    background: url(/static/images/Vector.svg) no-repeat right rgba(255, 255, 255, 0.2)!important;
+    background-position : 96% 50%!important;
+ 
+ }
+ 
+ .form-control:focus,.form-select:focus{
+    box-shadow: none!important;
+    background-color: rgba(255, 255, 255, 0.27)!important;
+ }
+ .form-col form{
+    padding: 3vh 6vw;
+    height: 81%;
+ }
+ 
+ .range-wrap {
+    position: relative;
+  }
+  .range{
+    width: 100%;
+    background-color: red;
+  }
+ 
    /* INPUT RANGE */
  input[type='range'] {
    -webkit-appearance: none;
