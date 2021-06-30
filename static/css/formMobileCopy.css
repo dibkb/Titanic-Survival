@@ -29,7 +29,7 @@
 
    .form-col{
     grid-area: form-col;
-    background-color: var(--background);
+    background-color: var(--background)!important;
     
     /* animation */
     animation-name: img_load;
@@ -42,12 +42,12 @@
  }
  
  form input{
-    background-color: var(--background);
-    box-shadow: none;
+    background-color: var(--background)!important;
+    box-shadow: none!important;
  }
  form label{
-    font-family: "Roboto";
-    font-size: 14px;
+    font-family: "Roboto"!important;
+    font-size: 14px!important;
  }
  form input:not(.form-chekbox , .btn-result,.form-range),form select{
     background: rgba(255, 255, 255, 0.2)!important;
