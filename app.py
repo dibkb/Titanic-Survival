@@ -17,13 +17,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'u23t4y2g4hj1ygh4i4y234234bkj3juy43uyy4d'
 
 #comment this part in development
-uri = os.getenv("DATABASE_URL")  
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
+# uri = os.getenv("DATABASE_URL")  
+# if uri.startswith("postgres://"):
+#     uri = uri.replace("postgres://", "postgresql://", 1)
 
 
 
-ENV = 'production'
+ENV = 'dev'
 
 if ENV == 'dev':
    app.debug = True
@@ -48,6 +48,7 @@ class User(db.Model):
 
 #define routes
 @app.route('/')
+@app.route('/index')
 @app.route('/home')
 def home():
    return render_template('index.html')

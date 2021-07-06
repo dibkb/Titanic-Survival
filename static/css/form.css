@@ -136,7 +136,7 @@ form input:not(.form-chekbox , .btn-result,.range),form select{
  /* INPUT RANGE */
  input[type='range'] {
    -webkit-appearance: none;
-   background-color: var(--dark-red);
+   background-color: rgba(255, 255, 255, 0.2);
    height: 12px;
    overflow: hidden;
    width: 400px;
@@ -162,7 +162,7 @@ form input:not(.form-chekbox , .btn-result,.range),form select{
  input[type='range']::-moz-range-thumb {
    background: #fc2626;
    border-radius: 50%;
-   box-shadow: -1010px 0 0 1000px #666;
+   box-shadow: -1010px 0 0 1000px var(--dark-red);
    cursor: pointer;
    height: 12px;
    width: 12px;
@@ -170,17 +170,17 @@ form input:not(.form-chekbox , .btn-result,.range),form select{
  }
  
  input[type="range"]::-moz-range-track {
-   background-color: var(--dark-red);
+   background-color: rgba(255, 255, 255, 0.2);
  }
  input[type="range"]::-moz-range-progress {
-   background-color: var(--dark-red);
+   background-color: red;
    height: 12px
  }
  input[type="range"]::-ms-fill-upper {
-   background-color: var(--dark-red);
+   background-color: red;
  }
  input[type="range"]::-ms-fill-lower {
-   background-color: var(--dark-red);
+   background-color: red;
  }
 
 
